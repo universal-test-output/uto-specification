@@ -12,14 +12,12 @@ The first non-space character of each line is the control character. What follow
 
 * `%` *pragma*: communicate metadata to a consumer
   * `uto vX.Y`: specify the specification and major and minor version. this line must be first and is required
-  * `count N`: optional hint to specify how many tests and/or groups should follow at the current level. does not specify test count in nested groups
-    `N` must be a non-negative integer and must be honored
+  * `count N`: optional hint to specify how many tests and/or groups should follow at the current level. does not specify test count in nested groups. `N` must be a non-negative integer and must be honored
 * `"` *comment*: apply to the line above, not below
-* `.` *success*: passing test. use the remainder of the line to specify which test
-* `?` *pending*: skip test
-* `!` *error*: failing test
-* `(` *open*: the remainder of the line may be taken to be the group label
-  * groups may be nested
+* `.` *pass*: passing test. use the remainder of the line to specify which test
+* `?` *skip*: skip test
+* `!` *fail*: failing test
+* `(` *open*: the remainder of the line may be taken to be the group label. groups may be nested
 * `)` *close*
 
 
